@@ -1,0 +1,37 @@
+{
+  "name": "my-proxy",
+  "version": "1.0.0",
+  "author": "Benjamin Christau <benjamin.christau@oyez.fr>",
+  "license": "MIT",
+  "main": "src/index.js",
+  "bin": "./bin/index.js",
+  "files": [
+    "bin"
+  ],
+  "scripts": {
+    "build": "./node_modules/.bin/babel -d bin src",
+    "dev": "./node_modules/.bin/babel -w -d bin src"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
+    "@k0rdan/babel-plugin-dotenv-import": "^2.0.0",
+    "ansi-regex": "^5.0.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "chalk": "^3.0.0",
+    "commander": "^4.1.1",
+    "lodash": "^4.17.15",
+    "strip-ansi-stream": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1"
+  }
+}

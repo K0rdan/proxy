@@ -1,0 +1,38 @@
+{
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "commands": "./src/commands",
+          "utils": "./src/utils"
+        }
+      }
+    ],
+    [
+      "@k0rdan/babel-plugin-dotenv-import",
+      {
+        "moduleName": "@env",
+        "path": ".env",
+        "blacklist": null,
+        "whitelist": null,
+        "safe": true,
+        "allowUndefined": false,
+        "defaultImportName": "allEnv"
+      }
+    ]
+  ],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "sourceMaps": true
+}
